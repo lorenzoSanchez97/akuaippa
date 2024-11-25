@@ -1,0 +1,60 @@
+/* Estilos generales - Inicio */
+
+:root {
+    --red: #f00;
+    --default-white: #fff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #1e1e1e;
+}
+
+h2.title {
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 70px;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+p {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+.text-red {
+    color: var(--red);
+}
+
+.box-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+/* Estilos generales - Fin */

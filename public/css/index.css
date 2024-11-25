@@ -1,0 +1,632 @@
+/* Estilos Header - Inicio */
+
+#header {
+    width: 100%;
+    height: 90px;
+    background-color: var(--default-white);
+    position: relative;
+    z-index: 5;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+    animation: FadeIn 0.5s;
+}
+
+#header.sticky {
+    position: fixed;
+    z-index: 6;
+    top: 0;
+    animation: FadeInDown 0.5s;
+}
+
+#header-container {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 1320px;
+    padding: 0 15px;
+}
+
+#logo {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+#logo a {
+    display: inline-block;
+    height: 65px;
+}
+
+#logo img {
+    height: 100%;
+}
+
+
+#navbar {
+    height: 100%;
+    margin-right: 5px;
+}
+
+#burguer-button {
+    background: none;
+    border: none;
+    display: none;
+    font-size: 25px;
+}
+
+#navbar-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    height: 100%;
+}
+
+#navbar a {
+    display: inline-block;
+    color: #1E1E1E;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 90px;
+    transition: all 400ms;
+}
+
+#navbar a:hover {
+    color: var(--red)
+}
+
+#navbar a:active {
+    color: var(--red)
+}
+
+/*Animaciones header*/
+@keyframes FadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes FadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos Header - Fin */
+
+
+/* Estilos Side menu - Inicio */
+
+#side-menu {
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    right: -300px;
+    top: 0;
+    background-color: var(--default-white);
+    transition: all 0.4s;
+    z-index: 10;
+}
+
+#side-menu * {
+    color: #252525;
+}
+
+#side-menu.show {
+    right: 0;
+}
+
+#side-menu-header {
+    padding: 25px 15px 15px;
+}
+
+#side-menu-logo img {
+    display: inline-block;
+    height: 36px;
+}
+
+#side-menu-close-button {
+    font-size: 30px;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+}
+
+#side-menu-links-list,
+#side-menu-contact-data {
+    margin: 45px 0 70px 0;
+    padding: 0px 15px;
+    list-style: none;
+}
+
+#side-menu-links-list li {
+    border-bottom: 1px solid rgba(32, 31, 31, 0.1);
+    text-align: center;
+}
+
+#side-menu-links-list a {
+    padding: 15px 30px 15px 10px;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 700;
+    display: block;
+}
+
+#side-menu-contact-data li {
+    margin-bottom: 22px;
+    text-align: center;
+}
+
+#side-menu-contact-data a {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+/* Estilos Side menu - Fin */
+
+
+/* Estilos overlay - Inicio */
+
+#overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    transition: 0.4s;
+    backdrop-filter: blur(10px);
+}
+
+#overlay.on {
+    visibility: visible;
+    opacity: 1;
+    z-index: 9;
+}
+
+/* Estilos overlay - Fin */
+
+
+/* Estilos Banner - Inicio */
+
+#banner {
+    width: 100%;
+    height: 731px;
+    box-shadow: 0px 0px 5px 1px #1E1E1E;
+    position: relative;
+}
+
+#banner-img-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#banner-text-container {
+    position: absolute;
+    z-index: 2;
+    top: 48%;
+    left: 17%;
+    max-width: 635px;
+}
+
+#banner h3 {
+    color: var(--default-white);
+    text-shadow: 2px 2px 2px #1e1e1e;
+}
+
+#banner h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--default-white);
+    text-shadow: 2px 2px 2px #1e1e1e;
+    line-height: 1.2;
+}
+
+#banner p {
+    font-size: 20px;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px black;
+    color: var(--default-white);
+    line-height: 1.5;
+}
+
+#banner #button {
+    margin-top: 40px;
+}
+
+#banner #button a {
+    background-color: var(--red);
+    padding: 16px 38px;
+    font-size: 20px;
+    color: var(--default-white);
+    font-weight: 700;
+    border-radius: 100px;
+    line-height: 1.5;
+    text-decoration: none;
+    transition: all .15s ease-in-out;
+}
+
+#banner #button a:hover {
+    background-color: #1E1E1E;
+}
+
+/* Estilos Banner - Fin */
+
+
+/* Estilos sección apoyo - Inicio */
+
+#section-apoyo {
+    padding-top: 50px;
+    padding-bottom: 125px;
+}
+
+#section-apoyo .info-box {
+    display: flex;
+    flex-direction: column;
+    max-width: 33.33%;
+    padding: 0 55px;
+}
+
+#section-apoyo .info-box img {
+    border-radius: 100%;
+    margin-bottom: 48px;
+}
+
+#section-apoyo .info-box h3 {
+    color: #1e1e1e;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Estilos sección apoyo - Fin */
+
+
+/* Estilos sección eventos - Inicio */
+
+#section-eventos {
+    background-color: rgb(232, 232, 232);
+    padding-top: 70px;
+    padding-bottom: 130px;
+}
+
+#section-eventos .title {
+    margin-bottom: 62px;
+    padding: 0 15px;
+}
+
+#section-eventos .box-wrapper {
+    gap: 1%;
+    justify-content: space-evenly;
+}
+
+#section-eventos .info-box {
+    background-color: var(--default-white);
+    box-shadow: 0 0 0 0 var(--default-white);
+    max-width: 23%;
+    height: fit-content;
+}
+
+#section-eventos .info-box img {
+    object-fit: cover;
+    display: block;
+    height: 190px;
+    width: 100%;
+}
+
+#section-eventos .info-box img:hover {
+    box-shadow: 1px 1px 5px 1px #5EBBE5;
+}
+
+.box-text-container {
+    padding: 30px 40px 57px 40px;
+}
+
+.box-text-container h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Estilos sección eventos - Fin */
+
+
+/* Estilos footer - Inicio */
+
+#footer {
+    background-color: #1e1e1e;
+    color: var(--default-white);
+    padding-top: 110px;
+    padding: 110px 0 60px;
+}
+
+#footer-main-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+#footer .link-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 33%;
+}
+
+#footer .address {
+    gap: 20px;
+}
+
+#footer a {
+    font-size: 20px;
+    color: var(--default-white);
+    transition: all 400ms;
+}
+
+#footer a:hover {
+    color: var(--red);
+}
+
+#footer-akuaippa-logo img {
+    display: block;
+    width: 250px;
+}
+
+#footer-foxy-logo img {
+    display: block;
+    width: 180px;
+    margin: 0 auto;
+}
+
+/* Estilos footer - Fin */
+
+/* Estilos scroll up button - Inicio */
+
+#scroll-up-button {
+    pointer-events: none;
+    opacity: 0;
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--default-white);
+    background: rgba(100, 100, 100, 0.4);
+    border-radius: 100%;
+    z-index: 9;
+    transition: all 0.5s ease;
+}
+
+#scroll-up-button.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+#scroll-up-button:hover {
+    background: #000;
+}
+
+/* Estilos scroll up button - Fin */
+
+
+/* Media Queries - Inicio */
+
+/* DESKTOP LARGE */
+@media (width < 1400px) {
+    #header-container {
+        max-width: 1140px;
+    }
+
+    #footer-main-container {
+        max-width: 1140px;
+    }
+}
+
+@media (width < 1380px) {
+    .box-wrapper {
+        max-width: 1140px;
+    }
+}
+
+/* DESKTOP */
+@media (width < 1200px) {
+    #header-container {
+        max-width: 960px;
+    }
+
+    .box-wrapper {
+        max-width: 960px;
+    }
+
+    #footer-main-container {
+        max-width: 960px;
+    }
+}
+
+@media (width < 992px) {
+    #header {
+        height: 60px;
+    }
+
+    #header-container {
+        max-width: 720px;
+    }
+
+    #navbar {
+        display: flex;
+        align-items: center;
+        margin-right: 0;
+    }
+
+    #burguer-button {
+        display: block;
+    }
+
+    #navbar-list {
+        display: none;
+    }
+
+    #logo a {
+        height: 36px;
+    }
+
+    #banner-text-container {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .box-wrapper {
+        max-width: 720px;
+    }
+
+    #section-eventos {
+        padding-bottom: 50px;
+    }
+
+    #section-eventos .info-box {
+        max-width: 45%;
+        margin-bottom: 30px;
+    }
+
+    #footer-main-container {
+        max-width: 720px;
+        flex-direction: column;
+        gap: 50px;
+        padding: 0 15px 50px 15px;
+    }
+
+    #footer .link-list {
+        width: 100%;
+    }
+
+    #footer-akuaippa-logo {
+        align-self: center;
+    }
+}
+
+/* TABLET */
+@media (width < 768px) {
+    #header-container {
+        max-width: 540px;
+    }
+
+    #banner {
+        height: 630px;
+    }
+
+    #banner-text-container {
+        top: 45%;
+    }
+
+    #banner-text-container h3 {
+        font-size: 17px;
+        line-height: 17px;
+    }
+
+    #banner-text-container h1 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .box-wrapper {
+        flex-direction: column;
+        align-items: center;
+        max-width: 540px;
+        gap: 60px;
+    }
+
+    #section-apoyo .info-box {
+        max-width: 100%;
+    }
+
+    #section-eventos .info-box {
+        max-width: 95%;
+    }
+
+    #footer-main-container {
+        max-width: 540px;
+    }
+}
+
+/* MOBILE */
+@media (width < 576px) {
+    #header {
+        height: 70px;
+    }
+
+    #header-container {
+        min-width: 100%;
+        height: 60px;
+    }
+
+    #navbar {
+        margin-top: 4px;
+    }
+
+    #logo a {
+        height: 50px;
+    }
+
+    .box-wrapper {
+        max-width: 100%;
+    }
+
+    #section-eventos .box-wrapper {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    #section-eventos .info-box {
+        max-width: 100%;
+    }
+
+    #side-menu-logo img {
+        height: 50px;
+    }
+}
+
+@media (width < 376px) {
+    #banner {
+        height: 660px;
+    }
+}
+
+@media (width < 321px) {
+    #banner {
+        height: 720px;
+    }
+}
+
+
+/* Media Queries - Fin */
