@@ -4,6 +4,8 @@ window.addEventListener("load", () => {
     let sideMenuCloseButton = document.querySelector("#side-menu-close-button")
     let sideMenu = document.querySelector("#side-menu");
     let overlay = document.querySelector("#overlay")
+    let navLinksSideMenu = document.querySelectorAll("#side-menu #side-menu-links-list a")
+    let sideMenuLogo = document.querySelector("#side-menu-header")
 
     burguerButton.addEventListener("click", () => {                 // Al clickear el botón hamburgesa se despliega el sidemenu y la covertura de la página
         sideMenu.classList.add("show")
@@ -16,6 +18,18 @@ window.addEventListener("load", () => {
     })
 
     overlay.addEventListener("click", () => {                       // Al clickear sobre la covertura esta se retira y se cierra el sidemenu 
+        sideMenu.classList.remove("show")
+        overlay.classList.remove("on")
+    })
+
+    navLinksSideMenu.forEach(link => {
+        link.addEventListener("click", () => {
+            sideMenu.classList.remove("show")
+            overlay.classList.remove("on")
+        })
+    })
+
+    sideMenuLogo.addEventListener("click", () => {                       // Al clickear sobre la covertura esta se retira y se cierra el sidemenu 
         sideMenu.classList.remove("show")
         overlay.classList.remove("on")
     })
